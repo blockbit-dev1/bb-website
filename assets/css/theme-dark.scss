@@ -1,0 +1,852 @@
+$color-white: #ffffff;
+$optional-color-1: #7517cd;
+$optional-color-2: #ff9083;
+$dark-color: #1d1d1d;
+$bg-color: #252525;
+
+.switch-box {
+  position: fixed;
+  bottom: 15px;
+  right: 120px;
+  z-index: 9999;
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    border: 1.5px solid $optional-color-1;
+    transition: 0.4s;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 25px;
+      width: 25px;
+      left: 0px;
+      bottom: 4px;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      transition: 0.4s;
+      box-shadow: 0 0px 15px #2020203d;
+      background: white url("../images/night.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &.round {
+      border-radius: 34px;
+      &::before {
+        border-radius: 50%;
+      }
+    }
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+  }
+  input:checked + .slider {
+    background-color: $optional-color-1;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(24px);
+    background: white url("../images/sunny.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.theme-dark {
+  $main-color: #ffffff;
+  $paragraph-color: #ffffff;
+  body {
+    color: $color-white;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color-white;
+  }
+  h3 {
+    color: $color-white;
+    a {
+      color: $color-white;
+      transition: 0.7s;
+    }
+  }
+  p {
+    color: $color-white;
+  }
+  body {
+    background: $dark-color;
+  }
+  .section-title {
+    h2 {
+      color: $color-white;
+    }
+    p {
+      color: $color-white;
+    }
+  }
+  .top-header-bg {
+    background-color: $dark-color;
+  }
+  .top-right {
+    .language-list {
+      .nice-select {
+        .list {
+          background-color: $bg-color;
+          color: $color-white;
+          .option {
+            color: $color-white;
+          }
+        }
+        .option {
+          &:hover {
+            color: $color-white;
+            background-color: $optional-color-1;
+          }
+          &.focus {
+            color: $color-white;
+            background-color: $optional-color-1;
+          }
+          &.selected {
+            &.focus {
+              color: $color-white;
+              background-color: $optional-color-1;
+            }
+          }
+        }
+      }
+    }
+  }
+  .main-nav {
+    background-color: $bg-color;
+    .navbar {
+      .navbar-brand {
+        .logo-one {
+          display: none;
+        }
+        .logo-two {
+          display: inline-block;
+        }
+      }
+    }
+    nav {
+      .navbar-nav {
+        .nav-item {
+          a {
+            color: $color-white;
+            i {
+              color: $color-white;
+            }
+          }
+          .dropdown-menu {
+            background-color: $bg-color !important;
+            li {
+              a {
+                color: $color-white !important;
+                &.active {
+                  color: #ff9083 !important;
+                }
+                &:hover {
+                  color: #ff9083 !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .mobile-nav {
+    .logo {
+      .logo-two {
+        display: inline-block;
+      }
+      .logo-one {
+        display: none;
+      }
+    }
+  }
+  .mean-container {
+    .mean-bar {
+      background-color: $bg-color;
+    }
+    .navbar-nav {
+      background-color: $dark-color;
+    }
+    .mean-nav {
+      ul {
+        li {
+          a {
+            color: $color-white;
+          }
+          .dropdown-menu {
+            background-color: $dark-color;
+          }
+        }
+      }
+    }
+  }
+  .nav-bar-side {
+    .language-nav-list {
+      .language-list-item {
+        color: $color-white;
+      }
+      .nice-select {
+        &:after {
+          border-color: $color-white;
+        }
+        .list {
+          background-color: $bg-color;
+          color: $color-white;
+          .option {
+            color: $color-white;
+          }
+        }
+        .option {
+          &:hover {
+            color: $color-white;
+            background-color: $optional-color-1;
+          }
+          &.focus {
+            color: $color-white;
+            background-color: $optional-color-1;
+          }
+          &.selected {
+            &.focus {
+              color: $color-white;
+              background-color: $optional-color-1;
+            }
+          }
+        }
+      }
+    }
+    .shoping-nav-btn-2 {
+      color: $color-white;
+      &:hover {
+        color: $optional-color-1;
+      }
+    }
+  }
+  .banner-area {
+    background-color: $dark-color;
+  }
+  .banner-img {
+    .banner-img-shape {
+      .banner-bg-shape1 {
+        display: none;
+      }
+      .banner-bg-shape2 {
+        display: inline-block;
+      }
+    }
+  }
+  .banner-slider-area {
+    background-color: #181818;
+  }
+  .banner-area-two {
+    .shape-circle img {
+      opacity: 0.5;
+    }
+  }
+  .inner-banner {
+    background-color: #181818;
+    ul {
+      li {
+        color: $color-white;
+        a {
+          color: $color-white;
+        }
+      }
+    }
+  }
+  .work-area {
+    background-color: $bg-color;
+  }
+  .about-content {
+    ul {
+      li {
+        color: $color-white;
+      }
+    }
+  }
+  .about-area-two {
+    &::before {
+      background-color: $bg-color;
+    }
+  }
+  .about-content-two {
+    .about-counter {
+      span {
+        color: $color-white;
+      }
+    }
+  }
+  .choose-item {
+    background-color: $bg-color;
+  }
+  .services-area {
+    background-color: $bg-color;
+  }
+  .services-scroll-area {
+    background-color: $dark-color;
+    box-shadow: none;
+  }
+  .services-scroll-area-into {
+    background-color: $dark-color;
+  }
+  .services-card {
+    background-color: $bg-color;
+    &:hover {
+      h3 {
+        a {
+          color: $dark-color !important;
+        }
+      }
+    }
+  }
+  .services-item {
+    background-color: $bg-color;
+    .read-more {
+      color: $color-white;
+      transition: 0.7s;
+      &:hover {
+        color: $optional-color-1;
+      }
+    }
+  }
+  .services-item-two {
+    background-color: $bg-color;
+    &:hover {
+      h3 {
+        a {
+          color: $optional-color-1;
+        }
+      }
+    }
+    .read-more {
+      color: $color-white;
+      transition: 0.7s;
+      &:hover {
+        color: $optional-color-1;
+      }
+    }
+  }
+  .services-details-title {
+    background-color: $bg-color;
+    .title {
+      color: $color-white;
+    }
+    .social-icon {
+      li {
+        color: $color-white;
+      }
+    }
+  }
+  .testimonial-area-two {
+    background-color: $bg-color;
+  }
+  .testimonial-slider-item {
+    background-color: $dark-color;
+  }
+  .testimonial-area-three {
+    &::before {
+      background-color: $bg-color;
+    }
+  }
+  .testimonial-area-bg {
+    background-color: $bg-color;
+  }
+  .brand-area {
+    background-color: $bg-color;
+  }
+  .brand-item {
+    .brand-logo-two {
+      display: inline-block !important;
+    }
+    .brand-logo-one {
+      display: none !important;
+    }
+  }
+  .choose-area {
+    background-color: $bg-color;
+  }
+  .choose-card {
+    background-color: $dark-color;
+  }
+  .counter-area {
+    background-color: $dark-color;
+    border-bottom: 1px solid #3b3b3b;
+  }
+  .choose-area-four {
+    background-color: $bg-color;
+  }
+  .product-card {
+    .product-card-img {
+      background-color: $bg-color;
+    }
+    .content {
+      h3 {
+        a {
+          color: $color-white;
+          transition: 0.7s;
+          &:hover {
+            color: $optional-color-1;
+          }
+        }
+      }
+    }
+  }
+  .blog-card {
+    .content {
+      ul {
+        li {
+          color: $color-white;
+          i {
+            transition: 0.7s;
+          }
+          a {
+            color: $color-white;
+            transition: 0.7s;
+          }
+          &:hover {
+            i {
+              color: $color-white;
+            }
+            a {
+              color: $optional-color-1;
+            }
+          }
+        }
+      }
+      h3 {
+        a {
+          color: $color-white;
+          &:hover {
+            color: $optional-color-1;
+          }
+        }
+      }
+      .read-more {
+        color: $color-white;
+        &:hover {
+          color: $optional-color-1;
+        }
+      }
+    }
+  }
+  .blog-article {
+    .blog-article-title {
+      ul {
+        li {
+          color: $color-white;
+          a {
+            color: $color-white;
+          }
+          &:hover {
+            i {
+              color: $optional-color-2;
+            }
+            a {
+              color: $optional-color-1;
+            }
+          }
+        }
+      }
+    }
+    .article-content {
+      .blockquote {
+        background-color: $bg-color;
+        p {
+          color: $color-white;
+        }
+      }
+    }
+    .comments-wrap {
+      .comment-title {
+        background-color: $bg-color;
+        .title {
+          color: $color-white;
+        }
+        .social-icon {
+          li {
+            color: $color-white;
+          }
+        }
+      }
+      .comment-form {
+        li {
+          background-color: $bg-color;
+          .content {
+            h4 {
+              color: $color-white;
+            }
+          }
+        }
+      }
+    }
+    .comments-form {
+      .title {
+        color: $color-white;
+      }
+    }
+  }
+  .team-item {
+    .content {
+      background-color: $bg-color;
+      h3 {
+        a {
+          color: $color-white;
+        }
+      }
+      span {
+        color: $color-white;
+      }
+      .social-icon-link {
+        li {
+          a {
+            color: $color-white;
+            border-color: $color-white;
+            &:hover {
+              color: $optional-color-1;
+            }
+          }
+        }
+      }
+    }
+  }
+  .search-widget {
+    background-color: $bg-color;
+    .search-form {
+      background-color: $bg-color;
+      .form-control {
+        background-color: $bg-color;
+        color: $color-white;
+      }
+      button {
+        i {
+          color: $color-white;
+        }
+      }
+    }
+  }
+  .product-side-bar-widget {
+    background-color: transparent;
+    .title {
+      color: $color-white;
+    }
+    .price-range-filter-item {
+      h4 {
+        color: $color-white;
+      }
+    }
+  }
+  .product-detls-image {
+    background-color: $bg-color;
+  }
+  .product-desc {
+    .product-share {
+      ul {
+        li {
+          color: $color-white;
+        }
+      }
+    }
+  }
+  .products-tabs-reviews {
+    .tabs-reviews-comments-form {
+      .title {
+        color: $color-white;
+      }
+    }
+    .tabs-reviews {
+      .tabs-reviews-form {
+        li {
+          background-color: $bg-color;
+          .content {
+            h4 {
+              color: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .cart-wraps-area {
+    .cart-wraps {
+      background-color: $bg-color;
+    }
+    .cart-table {
+      table {
+        thead {
+          tr {
+            th {
+              color: $color-white;
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              &.product-name {
+                a {
+                  color: $color-white;
+                }
+              }
+              &.product-thumbnail {
+                a {
+                  img {
+                    background-color: $dark-color;
+                  }
+                }
+              }
+              &.product-quantity {
+                .input-counter {
+                  input {
+                    color: $color-white;
+                    background-color: $dark-color;
+                  }
+                }
+              }
+              &.product-subtotal {
+                .remove {
+                  color: $color-white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .cart-calc {
+      background-color: $bg-color;
+      .cart-wraps-form {
+        h3 {
+          color: $color-white;
+        }
+        .form-group {
+          .form-control {
+            background-color: $dark-color;
+            color: $color-white;
+          }
+          .nice-select {
+            background-color: $dark-color;
+            color: $color-white;
+          }
+          .list {
+            background-color: $bg-color;
+            color: $color-white;
+            .option {
+              color: $color-white;
+            }
+          }
+          .option {
+            &:hover {
+              color: $color-white;
+              background-color: $optional-color-1;
+            }
+            &.focus {
+              color: $color-white;
+              background-color: $optional-color-1;
+            }
+            &.selected {
+              &.focus {
+                color: $color-white;
+                background-color: $optional-color-1;
+              }
+            }
+          }
+        }
+      }
+    }
+    .cart-totals {
+      background-color: $bg-color;
+      ul {
+        li {
+          color: $color-white;
+        }
+      }
+    }
+  }
+  .checkout-method {
+    p [type="radio"]:checked + label {
+      color: $color-white;
+    }
+    p [type="radio"]:not(:checked) {
+      display: none;
+    }
+    p [type="radio"]:not(:checked) + label {
+      color: $optional-color-2;
+      &::after {
+        color: $optional-color-2;
+      }
+    }
+  }
+  .payment-box {
+    .content {
+      img {
+        background-color: $bg-color;
+      }
+    }
+    .total-amount {
+      .amount-title {
+        color: $color-white;
+      }
+      .vat-title {
+        color: $color-white;
+      }
+      .total-title {
+        color: $color-white;
+      }
+    }
+  }
+  .side-bar-profile {
+    background-color: $bg-color;
+  }
+  .side-bar-widget {
+    .title {
+      color: $color-white;
+    }
+    .widget-popular-post {
+      .item {
+        .info {
+          .title-text {
+            a {
+              color: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .contact-form {
+    .form-group {
+      label {
+        color: $color-white;
+      }
+      .form-control {
+        background-color: $bg-color;
+        color: $color-white;
+      }
+      &.checkbox-option {
+        p {
+          color: $color-white;
+        }
+      }
+    }
+    .agree-label {
+      label {
+        color: $color-white;
+        a {
+          &:hover {
+            color: $optional-color-2;
+          }
+        }
+      }
+    }
+  }
+  .contact-address {
+    background-color: $bg-color;
+  }
+
+  .faq-accordion {
+    background-color: $bg-color;
+    .accordion {
+      background-color: $bg-color;
+      .accordion-title {
+        color: $color-white;
+        i {
+          color: $color-white;
+          border-color: $color-white;
+        }
+      }
+    }
+  }
+  .footer-widget {
+    .footer-logo {
+      .footer-logo1 {
+        display: none;
+      }
+      .footer-logo2 {
+        display: inline-block;
+      }
+    }
+    .footer-list {
+      li {
+        a {
+          color: $color-white;
+          transition: 0.9s;
+          &:hover {
+            color: $optional-color-1;
+          }
+        }
+      }
+    }
+  }
+  .footer-bg {
+    background-color: #222222;
+  }
+  .copy-right-border {
+    border-top: 1px solid #474747;
+  }
+  .copy-right-bg {
+    background-color: $bg-color;
+  }
+  .error-area {
+    .error-content {
+      h1 {
+        color: $color-white;
+      }
+      h3 {
+        color: $color-white;
+      }
+      p {
+        color: $color-white;
+      }
+    }
+  }
+  .coming-soon-area {
+    background-color: $dark-color;
+    .coming-soon-content {
+      background-color: $bg-color;
+      h1 {
+        color: $color-white;
+      }
+      p {
+        color: $color-white;
+      }
+      #timer {
+        div {
+          background-color: $dark-color;
+          color: $color-white;
+          span {
+            color: $color-white;
+          }
+        }
+      }
+      .newsletter-form {
+        .input-newsletter {
+          background-color: $dark-color;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
